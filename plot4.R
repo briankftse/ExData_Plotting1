@@ -11,7 +11,7 @@ d <- data[(data$Date == '1/2/2007') | (data$Date == '2/2/2007'),]
 datetime <- strptime(paste(d$Date, d$Time), "%d/%m/%Y %H:%M:%S")
 
 # Create png file plot4.png with 480x480 dimensions
-png("plot4.png", 480,480)
+png("plot4.png", 480, 480, bg = "transparent")
 
 # create 2x2 matrix for plots
 par(mfrow=c(2,2))

@@ -11,7 +11,7 @@ d <- data[(data$Date == '1/2/2007') | (data$Date == '2/2/2007'),]
 datetime <- strptime(paste(d$Date, d$Time), "%d/%m/%Y %H:%M:%S")
 
 # Create png file plot3.png with 480x480 dimensions
-png("plot3.png", 480,480)
+png("plot3.png", 480, 480, bg = "transparent")
 
 # Create the plot
 plot(datetime, d$Sub_metering_1, type="l", 
@@ -29,7 +29,3 @@ legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
 
 # Save the plot to the png
 dev.off()
-
-
-
-

@@ -11,7 +11,7 @@ d <- data[(data$Date == '1/2/2007') | (data$Date == '2/2/2007'),]
 datetime <- strptime(paste(d$Date, d$Time), "%d/%m/%Y %H:%M:%S")
 
 # Create png file plot2.png with 480x480 dimensions
-png("plot2.png", 480,480)
+png("plot2.png", 480, 480, bg = "transparent")
 
 # Create the plot
 plot(datetime, d$Global_active_power, type="l", 
@@ -19,6 +19,3 @@ plot(datetime, d$Global_active_power, type="l",
 
 # Save the plot to the png
 dev.off()
-
-
-

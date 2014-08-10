@@ -8,7 +8,7 @@ data <- read.table("household_power_consumption.txt", sep = ";",
 d <- data[(data$Date == '1/2/2007') | (data$Date == '2/2/2007'),]
 
 # Create png file plot1.png with 480x480 dimensions
-png("plot1.png", 480,480)
+png("plot1.png", 480, 480, bg = "transparent")
 
 # Create the histogram
 hist(as.numeric(d$Global_active_power), col="RED",
